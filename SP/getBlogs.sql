@@ -8,7 +8,7 @@ BEGIN
 		THEN
 			SELECT * FROM blogs order by pCount desc LIMIT 7;
 		ELSE
-			SELECT blogid,
+			SELECT blogId,
 					title,
                     left(content,200) as content,
                     image
