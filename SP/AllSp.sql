@@ -51,17 +51,24 @@ END$$
 
 DROP procedure IF EXISTS `getBlogs`$$
 
-CREATE PROCEDURE `getBlogs`(in hotB int)
+CREATE PROCEDURE `getBlogs`(in ID int)
 BEGIN
-	if hotB = 1
+	if ID = -1
 		THEN
 			SELECT * FROM blogs order by pCount desc LIMIT 7;
-		ELSE
-			SELECT blogid,
+	ELSEIF ID = 0
+		THEN
+			SELECT blogId,
 					title,
-                    left(content,200) as content,
+                    left(content,250) as content,
                     image
 					FROM blogs;
+	ELSE
+			SELECT blogId,
+					title,
+					content,
+                    image
+					FROM blogs where blogid = ID;
 	end if;
 END$$
 DELIMITER ;
