@@ -7,10 +7,10 @@ use `mist_middle`;
 CREATE TABLE `products` (
     productId INT AUTO_INCREMENT PRIMARY KEY,
     productName VARCHAR(30) NOT NULL,
-    productDescription VARCHAR(500),
-    productCategory VARCHAR(10) not null,
-    ProductUnit VARCHAR(10) not null,
-    ProductUnitQuantity VARCHAR(30) not null,
+    productDescription VARCHAR(1000),
+    productCategory VARCHAR(30) not null,
+    productUnit VARCHAR(10) not null,
+    productUnitQuantity VARCHAR(30) not null,
     productUnitPrice VARCHAR(30) NOT NULL
 );
 
