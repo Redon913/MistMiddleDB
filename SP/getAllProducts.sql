@@ -2,7 +2,7 @@
 DELIMITER $$
 USE `mist_middle`$$
 
-DROP procedure IF EXISTS `getAllProducts`;
+DROP procedure IF EXISTS `getAllProducts`$$
 
 CREATE PROCEDURE `getAllProducts`(in productId int)
 BEGIN
